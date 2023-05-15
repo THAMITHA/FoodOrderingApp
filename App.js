@@ -1,19 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//React.createElement => ReactElement-JS Object => HTMLElement(render)
 
-const heading = React.createElement("h1", { id: "heading" }, "Namaste React🚀");
+const data=1000;
 
-console.log(heading);
+const Title=()=>(
+    
+    <h1 className="head" tabIndex="1">
+Namaste React using JSX 🚀
+</h1>);
 
-//JSX(transpiled before it receive the JS) -  PARCEL - Babel
+const HeadingComponent=()=>(
+    <>
+    <div id="container">
+        {Title()}
+        <Title/>
+        <Title></Title>
+        <h1 className="heading">Namaste React arrow functional Component inside container1</h1>
+    </div>
+    <div id="container2">
+        <h1 className="heading2">Namaste React arrow functional Component inside container-2</h1>
+    </div>
+    </>
+    );
+    
 
-//JSX=> Babel transpiles it to React.createElement=>ReactElement-JS Object =>HTMLElement(render)
-const jsxHeading = (<h1 className="head">Namaste React using JSX 🚀</h1>);
 
-console.log(jsxHeading);
+// const number=1000;
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+root.render(<HeadingComponent/>);

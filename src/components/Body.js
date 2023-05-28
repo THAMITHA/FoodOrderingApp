@@ -22,7 +22,9 @@ const Body = () => {
     setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   }
 
-
+  if(listOfRestaurants.length ===0){
+    return <h1>Loading...</h1>
+  }
   
 
 
@@ -62,6 +64,8 @@ const Body = () => {
       },
     },
   ];
+
+
   return (
     <div className="body">
       <div className="filer">

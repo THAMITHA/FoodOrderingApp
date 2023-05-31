@@ -19,7 +19,7 @@
 -Tree Shaking-remove unused code
 -Diffrent dev and prod bundles
 
-# Namaste Food
+# FoodOrderingApp
 
 /\*\*
 
